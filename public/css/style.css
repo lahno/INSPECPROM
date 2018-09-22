@@ -1,0 +1,9 @@
+header .rd-navbar-brand img {
+    max-height: 80px;
+}
+.rd-navbar-static .rd-navbar-nav > li .rd-navbar-dropdown, .rd-navbar-fullwidth .rd-navbar-nav > li .rd-navbar-dropdown{
+    width: 290px;
+}
+.post-single-body img{
+    width: auto;
+}
