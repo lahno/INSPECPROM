@@ -5,7 +5,7 @@
 			<div class="range range-xl-condensed range-60 range-justify">
 				<div class="cell-sm-6 cell-lg-2 cell-xl-2 cell-xl-preffix-1">
 					<div class="decorative decorative-md">
-						<h5 class="decorative-title">О нас</h5>
+						<h5 class="decorative-title">{{trans('content.about')}}</h5>
 						@if(LaravelLocalization::getCurrentLocale() == 'ru')
 							<p>{{$about_text->short_desc}}</p>
 						@elseif(LaravelLocalization::getCurrentLocale() == 'en')
@@ -18,13 +18,13 @@
 				<!-- Contacts-->
 				<div class="cell-sm-6 cell-lg-3 cell-xl-2">
 					<div class="decorative decorative-md">
-						<h5 class="decorative-title">Наши контакты</h5>
+						<h5 class="decorative-title">{{trans('content.our_contacts')}}</h5>
 						<ul class="list-lg">
 							<li>
 								<div class="unit unit-horizontal unit-spacing-xxs">
 									<div class="unit__left"><span class="icon icon-xs icon-white mdi mdi-map-marker"></span></div>
 									<div class="unit__body">
-										<a class="link-default" href="{{route('contact')}}#map_contact">{{Config::get('contacts.address')}}</a>
+										<a class="link-default" href="{{route('contact')}}#map_contact">{{trans('content.address')}}</a>
 									</div>
 								</div>
 							</li>
@@ -50,18 +50,18 @@
 				<!-- Links-->
 				<div class="cell-sm-6 cell-lg-3 cell-xl-2">
 					<div class="decorative decorative-md">
-						<h5 class="decorative-title">Популярные разделы</h5>
+						<h5 class="decorative-title">{{trans('content.featured_sections')}}</h5>
 						<ul class="list-marked list-marked-1">
-							<li><a href="{{route('products')}}">Продукция</a></li>
-							<li><a href="{{route('contact')}}">Контакты</a></li>
-							<li><a href="{{route('about')}}">О нас</a></li>
+							<li><a href="{{route('products')}}">{{trans('content.production')}}</a></li>
+							<li><a href="{{route('contact')}}">{{trans('content.contacts')}}</a></li>
+							<li><a href="{{route('about')}}">{{trans('content.about')}}</a></li>
 						</ul>
 					</div>
 				</div>
 				<!-- Form-->
 				<div class="cell-sm-6 cell-lg-4 cell-xl-3 cell-xl-postfix-1">
 					<div class="decorative decorative-md">
-						<h5 class="decorative-title">Версии сайта</h5>
+						<h5 class="decorative-title">{{trans('content.change_language')}}</h5>
 						<ul class="list-marked list-marked-1">
 						@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
 							<li>

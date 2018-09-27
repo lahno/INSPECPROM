@@ -49,6 +49,7 @@ class Categories extends Section
             ->setHtmlAttribute('class', 'table-primary');
 
         $display->setColumns([
+            AdminColumn::text('id', 'ID'),
             AdminColumn::text('name', 'Name'),
             AdminColumn::text('name_ua', 'Name UA'),
             AdminColumn::text('name_en', 'Name EN'),
@@ -104,10 +105,10 @@ class Categories extends Section
                     AdminFormElement::textarea('desc', 'Описание')
                 ], 12)
                 ->addColumn([
-                    AdminFormElement::ckeditor('desc_ua', 'Описание UA')
+                    AdminFormElement::textarea('desc_ua', 'Описание UA')
                 ], 12)
                 ->addColumn([
-                    AdminFormElement::ckeditor('desc_en', 'Описание EN')
+                    AdminFormElement::textarea('desc_en', 'Описание EN')
                 ], 12)
 
         ]);

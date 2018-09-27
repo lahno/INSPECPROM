@@ -33,7 +33,8 @@
                     <div class="rd-navbar-cell">
                         <ul class="navbar-inline-list">
                             <li class="rd-navbar-info">
-                                <div class="icon icon-xs mdi mdi-map-marker"></div><a class="link" href="{{route('contact')}}#map_contact">{{Config::get('contacts.address')}}</a>
+                                <div class="icon icon-xs mdi mdi-map-marker"></div>
+                                <a class="link" href="{{route('contact')}}#map_contact">{{trans('content.address')}}</a>
                             </li>
                             <li class="rd-navbar-info">
                                 <div class="icon icon-xs mdi mdi-email-outline"></div>
@@ -104,44 +105,92 @@
                         <!-- RD Navbar Nav-->
                         <ul class="rd-navbar-nav toggle-original-elements">
                             <li class="{{(Route::currentRouteNamed('home')) ? 'active' : ''}}">
-                                <a href="{{route('home')}}">Главная</a>
+                                <a href="{{route('home')}}">{{trans('content.home')}}</a>
                             </li>
                             <li class="{{(Route::currentRouteNamed('products')) ? 'active' : ''}} rd-navbar--has-dropdown rd-navbar-submenu">
-                                <a href="{{route('products')}}">Продукция</a>
+                                <a href="{{route('products')}}">{{trans('content.production')}}</a>
                                 <ul class="rd-navbar-dropdown">
                                     @foreach($menu_prod as $item)
                                         @if(count($item->getProducts) && !$item->parent_id)
                                             @if(count($item->getParents))
                                                 <li>
-                                                    <a href="{{route('getCategory', ['id'=>$item->id])}}">{{$item->name}}</a>
+                                                    @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                        <a href="{{route('getCategory', ['id'=>$item->id])}}">{{$item->name}}</a>
+                                                    @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                        <a href="{{route('getCategory', ['id'=>$item->id])}}">{{$item->name_en}}</a>
+                                                    @else
+                                                        <a href="{{route('getCategory', ['id'=>$item->id])}}">{{$item->name_ua}}</a>
+                                                    @endif
                                                     <ul class="rd-navbar-dropdown">
                                                         @foreach($item->getParents as $category)
                                                             <li>
-                                                                <a href="{{route('getCategory', ['id'=>$category->id])}}">{{$category->name}}</a>
+                                                                @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                                    <a href="{{route('getCategory', ['id'=>$category->id])}}">{{$category->name}}</a>
+                                                                @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                                    <a href="{{route('getCategory', ['id'=>$category->id])}}">{{$category->name_en}}</a>
+                                                                @else
+                                                                    <a href="{{route('getCategory', ['id'=>$category->id])}}">{{$category->name_ua}}</a>
+                                                                @endif
                                                                 <ul class="rd-navbar-dropdown">
                                                                     @foreach($category->getProducts as $product)
-                                                                        <li>
-                                                                            <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
-                                                                        </li>
+                                                                        @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                                            <li>
+                                                                                <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                            </li>
+                                                                        @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                                            <li>
+                                                                                <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                            </li>
+                                                                        @else
+                                                                            <li>
+                                                                                <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                            </li>
+                                                                        @endif
                                                                     @endforeach
                                                                 </ul>
                                                             </li>
                                                         @endforeach
                                                         @foreach($item->getProducts as $product)
-                                                            <li>
-                                                                <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
-                                                            </li>
+                                                            @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                                <li>
+                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                </li>
+                                                            @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                                <li>
+                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                </li>
+                                                            @else
+                                                                <li>
+                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                </li>
+                                                            @endif
                                                         @endforeach
                                                     </ul>
                                                 </li>
                                             @else
                                                 <li>
-                                                    <a href="{{route('getCategory', ['id'=>$item->id])}}">{{$item->name}}</a>
+                                                    @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                        <a href="{{route('getCategory', ['id'=>$item->id])}}">{{$item->name}}</a>
+                                                    @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                        <a href="{{route('getCategory', ['id'=>$item->id])}}">{{$item->name_en}}</a>
+                                                    @else
+                                                        <a href="{{route('getCategory', ['id'=>$item->id])}}">{{$item->name_ua}}</a>
+                                                    @endif
                                                     <ul class="rd-navbar-dropdown">
                                                         @foreach($item->getProducts as $product)
-                                                            <li>
-                                                                <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
-                                                            </li>
+                                                            @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                                <li>
+                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                </li>
+                                                            @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                                <li>
+                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                </li>
+                                                            @else
+                                                                <li>
+                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                </li>
+                                                            @endif
                                                         @endforeach
                                                     </ul>
                                                 </li>
@@ -151,16 +200,16 @@
                                 </ul>
                             </li>
                             <li class="{{(Route::currentRouteNamed('gallery')) ? 'active' : ''}}">
-                                <a href="{{route('gallery')}}">Галерея</a>
+                                <a href="{{route('gallery')}}">{{trans('content.gallery')}}</a>
                             </li>
                             <li class="{{(Route::currentRouteNamed('posts')) ? 'active' : ''}}">
-                                <a href="{{route('posts')}}">Новости</a>
+                                <a href="{{route('posts')}}">{{trans('content.news')}}</a>
                             </li>
                             <li class="{{(Route::currentRouteNamed('about')) ? 'active' : ''}}">
-                                <a href="{{route('about')}}">О компании</a>
+                                <a href="{{route('about')}}">{{trans('content.about')}}</a>
                             </li>
                             <li class="{{(Route::currentRouteNamed('contact')) ? 'active' : ''}}">
-                                <a href="{{route('contact')}}">Контакты</a>
+                                <a href="{{route('contact')}}">{{trans('content.contacts')}}</a>
                             </li>
                         </ul>
                     </div>

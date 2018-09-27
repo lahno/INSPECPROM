@@ -11,11 +11,11 @@
             <div class="range range-condensed">
                 <div class="cell-xs-10 cell-xl-preffix-1">
                     <div class="decorative decorative-lg">
-                        <h1 class="decorative-title">Новости</h1>
+                        <h1 class="decorative-title">{{trans('content.news')}}</h1>
                     </div>
                     <ol class="breadcrumbs-custom">
-                        <li><a href="{{route('home')}}">Главная</a></li>
-                        <li><a href="{{route('posts')}}">Новости</a></li>
+                        <li><a href="{{route('home')}}">{{trans('content.home')}}</a></li>
+                        <li><a href="{{route('posts')}}">{{trans('content.news')}}</a></li>
                     </ol>
                 </div>
             </div>
@@ -40,25 +40,41 @@
                             <section class="post-content text-left">
                                 <div class="decorative decorative-lg">
                                     <h3 class="decorative-title">
-                                        <a class="link-gray-dark" href="{{route('post', ['id'=>$post->id])}}">{{$post->name}}</a>
+                                        <a class="link-gray-dark" href="{{route('post', ['id'=>$post->id])}}">
+                                            @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                {{$post->name}}
+                                            @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                {{$post->name_en}}
+                                            @else
+                                                {{$post->name_ua}}
+                                            @endif
+                                        </a>
                                     </h3>
                                     <ul class="post-meta list-dotted">
                                         <li>
                                             <time datetime="{{$post->created_at}}">{{$post->created_at}}</time>
                                         </li>
                                         <li>
-                                            <a class="link" href="{{route('posts')}}">Новости</a>
+                                            <a class="link" href="{{route('posts')}}">{{trans('content.news')}}</a>
                                         </li>
                                     </ul>
-                                    <p class="post-description">{{$post->short_desc}}</p>
-                                    <a class="post-link" href="{{route('post', ['id'=>$post->id])}}">Подробнее</a>
+                                    <p class="post-description">
+                                        @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                            {{$post->short_desc}}
+                                        @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                            {{$post->short_desc_en}}
+                                        @else
+                                            {{$post->short_desc_ua}}
+                                        @endif
+                                    </p>
+                                    <a class="post-link" href="{{route('post', ['id'=>$post->id])}}">{{trans('content.learn_more')}}</a>
                                 </div>
                             </section>
                         </article>
                         @endforeach
                         {{--<a class="button button-secondary button-icon button-icon-left" href="#"><span class="icon fa-refresh"></span>Load more posts</a>--}}
                         @else
-                            <p class="post-description">Нет записей</p>
+                            <p class="post-description">{{trans('content.not_found_post')}}</p>
                         @endif
                     </section>
                 </div>
@@ -68,7 +84,7 @@
                         <div class="range range-60 range-md-90">
                             <div class="cell-sm-12 cell-md-12">
                                 <div class="decorative decorative-md">
-                                    <h5 class="decorative-title">Поиск</h5>
+                                    <h5 class="decorative-title">{{trans('content.search')}}</h5>
                                     <!-- Search Form-->
                                     <!-- RD Search Form-->
                                     <form class="form-search rd-search rd-mailform-inline rd-mailform-small" action="search-results.html" method="GET">
@@ -76,7 +92,7 @@
                                             <label class="form-label form-search-label form-label-sm" for="blog-sidebar-2-form-search-widget">Enter a keyword</label>
                                             <input class="form-input form-search-input form-control #{inputClass}" id="blog-sidebar-2-form-search-widget" type="text" name="s" autocomplete="off">
                                         </div>
-                                        <button class="button button-sm button-secondary form-search-submit" type="submit">Search</button>
+                                        <button class="button button-sm button-secondary form-search-submit" type="submit">{{trans('content.search_btn')}}</button>
                                     </form>
                                 </div>
                             </div>
@@ -85,7 +101,7 @@
                             <div class="cell-sm-6 cell-md-12">
                                 <div class="decorative">
                                     <div class="decorative decorative-md">
-                                        <h5 class="decorative-title">Наша галерея</h5>
+                                        <h5 class="decorative-title">{{trans('content.our_gallery')}}</h5>
                                         <ul class="gallery-custom" data-photo-swipe-gallery="gallery">
                                             @foreach($gallery as $item)
                                             <li>
@@ -109,10 +125,20 @@
                             <div class="cell-sm-6 cell-md-12">
                                 <div class="decorative">
                                     <div class="decorative decorative-md">
-                                        <h5 class="decorative-title">Категории новостей</h5>
+                                        <h5 class="decorative-title">{{trans('content.category_news')}}</h5>
                                         <ul class="list-marked list-marked-1">
                                             @foreach($categories as $category)
-                                                <li><a href="{{route('getCategory', ['id'=>$category->id])}}">{{$category->name}}</a></li>
+                                                <li>
+                                                    <a href="{{route('getCategory', ['id'=>$category->id])}}">
+                                                    @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                        {{$category->name}}
+                                                    @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                        {{$category->name_en}}
+                                                    @else
+                                                        {{$category->name_ua}}
+                                                    @endif
+                                                    </a>
+                                                </li>
                                             @endforeach
                                         </ul>
                                     </div>
@@ -122,7 +148,7 @@
                             <div class="cell-sm-6 cell-md-12">
                                 <div class="decorative">
                                     <div class="decorative decorative-md">
-                                        <h5 class="decorative-title">О нас</h5>
+                                        <h5 class="decorative-title">{{trans('content.about')}}</h5>
                                         <div class="sidebar-description">
                                             @if(LaravelLocalization::getCurrentLocale() == 'ru')
                                                 <p>{{str_limit($about_text->short_desc, 200)}}</p>

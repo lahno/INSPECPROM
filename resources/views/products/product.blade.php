@@ -14,18 +14,18 @@
                         @if(LaravelLocalization::getCurrentLocale() == 'ru')
                             <h1 class="decorative-title">{{$product->name}}</h1>
                         @elseif(LaravelLocalization::getCurrentLocale() == 'en')
-                            <h1 class="decorative-title">{{ucfirst(strtolower($product->name_en))}}</h1>
+                            <h1 class="decorative-title">{{$product->name_en}}</h1>
                         @else
                             <h1 class="decorative-title">{{$product->name_ua}}</h1>
                         @endif
                     </div>
                     <ol class="breadcrumbs-custom">
-                        <li><a href="{{route('home')}}">Главная</a></li>
-                        <li><a href="{{route('products')}}">Продукция</a></li>
+                        <li><a href="{{route('home')}}">{{trans('content.home')}}</a></li>
+                        <li><a href="{{route('products')}}">{{trans('content.production')}}</a></li>
                         @if(LaravelLocalization::getCurrentLocale() == 'ru')
                             <li>{{$product->name}}</li>
                         @elseif(LaravelLocalization::getCurrentLocale() == 'en')
-                            <li>{{ucfirst(strtolower($product->name_en))}}</li>
+                            <li>{{$product->name_en}}</li>
                         @else
                             <li>{{$product->name_ua}}</li>
                         @endif

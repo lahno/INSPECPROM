@@ -11,11 +11,11 @@
             <div class="range range-condensed">
                 <div class="cell-xs-10 cell-xl-preffix-1">
                     <div class="decorative decorative-lg">
-                        <h1 class="decorative-title">Продукция компании</h1>
+                        <h1 class="decorative-title">{{trans('content.prod_company')}}</h1>
                     </div>
                     <ol class="breadcrumbs-custom">
-                        <li><a href="{{route('home')}}">Главная</a></li>
-                        <li>Продукция</li>
+                        <li><a href="{{route('home')}}">{{trans('content.home')}}</a></li>
+                        <li>{{trans('content.production')}}</li>
                     </ol>
                 </div>
             </div>
@@ -37,8 +37,24 @@
                                 </a>
                             </div>
                             <div class="unit__body product-body">
-                                <h5 class="product-title"><a href="{{route('getCategory', ['id'=>$category->id])}}">{{$category->name}}</a></h5>
-                                <p class="product-description">{{$category->desc}}</p>
+                                <h5 class="product-title">
+                                    <a href="{{route('getCategory', ['id'=>$category->id])}}">
+                                        @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                            {{$category->name}}
+                                        @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                            {{$category->name_en}}
+                                        @else
+                                            {{$category->name_ua}}
+                                        @endif
+                                    </a>
+                                </h5>
+                                @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                    <p class="product-description">{{$category->desc}}</p>
+                                @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                    <p class="product-description">{{$category->desc_en}}</p>
+                                @else
+                                    <p class="product-description">{{$category->desc_ua}}</p>
+                                @endif
                             </div>
                         </div>
                     </div>

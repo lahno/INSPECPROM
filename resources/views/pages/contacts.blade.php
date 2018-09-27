@@ -20,7 +20,7 @@
                         @endif
                     </div>
                     <ol class="breadcrumbs-custom">
-                        <li><a href="{{route('home')}}">Главная</a></li>
+                        <li><a href="{{route('home')}}">{{trans('content.home')}}</a></li>
                         @if(LaravelLocalization::getCurrentLocale() == 'ru')
                             <li>{{$page->name}}</li>
                         @elseif(LaravelLocalization::getCurrentLocale() == 'en')
@@ -82,20 +82,20 @@
                                 </div>
                             </div>
                             <div class="form-button">
-                                <button class="button button-secondary" type="submit">Отправить</button>
+                                <button class="button button-secondary" type="submit">{{trans('content.btn_form_1')}}</button>
                             </div>
                         </form>
                     </div>
                 </div>
                 <div class="cell-md-4 cell-lg-5 cell-xl-3 cell-lg-preffix-1">
                     <div class="contact-box decorative decorative-md">
-                        <h5 class="decorative-title">{{Config::get('contacts.office_1')}}</h5>
+                        <h5 class="decorative-title">{{trans('content.city')}}</h5>
                         <ul class="list-lg">
                             <li>
                                 <div class="unit unit-horizontal unit-spacing-xxs">
                                     <div class="unit__left"><span class="icon icon-xs icon-primary mdi mdi-map-marker"></span></div>
                                     <div class="unit__body">
-                                        <a class="link-default" href="#map_contact">{{Config::get('contacts.address')}}</a>
+                                        <a class="link-default" href="#map_contact">{{trans('content.address')}}</a>
                                     </div>
                                 </div>
                             </li>
@@ -134,7 +134,7 @@
         <div class="rd-google-map rd-google-map__model" data-styles="" data-zoom="6" data-y="51.4943145" data-x="31.3061158">
             <ul class="map_locations">
                 <li data-y="51.4943145" data-x="31.3061158">
-                    <p>{{Config::get('contacts.address')}}</p>
+                    <p>{{trans('content.address')}}</p>
                 </li>
                 {{--<li data-y="50.458814" data-x="30.5471116">
                     <p>9870 St Vincent Place, Glasgow, DC 45 Fr 45.</p>

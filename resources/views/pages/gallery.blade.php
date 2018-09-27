@@ -11,11 +11,11 @@
             <div class="range range-condensed">
                 <div class="cell-xs-10 cell-xl-preffix-1">
                     <div class="decorative decorative-lg">
-                        <h1 class="decorative-title">Наша галерея</h1>
+                        <h1 class="decorative-title">{{trans('content.our_gallery')}}</h1>
                     </div>
                     <ol class="breadcrumbs-custom">
-                        <li><a href="{{route('home')}}">Главная</a></li>
-                        <li>Галерея</li>
+                        <li><a href="{{route('home')}}">{{trans('content.home')}}</a></li>
+                        <li>{{trans('content.gallery')}}</li>
                     </ol>
                 </div>
             </div>
@@ -33,13 +33,14 @@
                                 <button class="isotope-filters-toggle button button-sm button-primary" data-custom-toggle="#isotope-filters" data-custom-toggle-disable-on-blur="true">Filter<span class="caret"></span></button>
                                 <ul class="isotope-filters-list" id="isotope-filters">
                                     <li>
-                                        <a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="#">Все</a>
+                                        <a class="active" data-isotope-filter="*" data-isotope-group="gallery" href="#">{{trans('content.all')}}</a>
                                     </li>
                                     @foreach($types as $type)
                                     <li>
                                         <a data-isotope-filter="{{$type->name}}"
                                            data-isotope-group="gallery"
-                                           href="#">{{$type->display_name}}
+                                           href="#">
+                                            {{$type->display_name}}
                                         </a>
                                     </li>
                                     @endforeach
@@ -60,7 +61,13 @@
                                             <img src="{{asset($item->image_mid)}}" alt="" width="400" height="270"/>
                                             <div class="caption">
                                                 <div class="icon icon-white mdi mdi-magnify-plus"></div>
-                                                <h6 class="title">{{$item->name}}</h6>
+                                                @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                    <h6 class="title">{{$item->name}}</h6>
+                                                @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                    <h6 class="title">{{$item->name_en}}</h6>
+                                                @else
+                                                    <h6 class="title">{{$item->name_ua}}</h6>
+                                                @endif
                                             </div>
                                         </a>
                                     </div>

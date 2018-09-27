@@ -15,10 +15,10 @@
                             <div class="range range-xl-condensed">
                                 <div class="cell-sm-11 cell-xl-6 cell-xl-preffix-1">
                                     <div class="decorative decorative-lg">
-                                        <h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100">Группа компаний “МАГР”</h1>
-                                        <h5 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">Научно-производственное объединение “Группа компаний “МАГР” создано в 1998 году. Центральный офис, конструкторское бюро и производство расположены в г. Чернигов. Представительства компании работают в Украине и Беларуси.</h5>
+                                        <h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100">{{trans('content.magr_group')}}</h1>
+                                        <h5 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">{{trans('content.magr_text')}}</h5>
                                         <div class="group-xl not-animated" data-caption-animate="fadeInUp" data-caption-delay="450">
-                                            <a class="button button-secondary" href="{{route('about')}}">О нас</a>
+                                            <a class="button button-secondary" href="{{route('about')}}">{{trans('content.about')}}</a>
                                             {{--<a class="button button-white-outline" href="about-us.html">Start a journey</a>--}}
                                         </div>
                                     </div>
@@ -36,7 +36,7 @@
             <div class="range range-40 range-md-70 range-xl-condensed range-justify">
                 <div class="cell-sm-12 cell-xl-10 cell-xl-preffix-1 cell-xl-postfix-1">
                     <div class="decorative decorative-lg">
-                        <h3 class="decorative-title">Продукция</h3>
+                        <h3 class="decorative-title">{{trans('content.production')}}</h3>
                     </div>
                 </div>
                 @foreach($categories as $i => $category)
