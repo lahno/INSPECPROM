@@ -32,7 +32,7 @@
                         <div class="decorative decorative-lg">
                             <h3 class="decorative-title post-heading">{{$post->name}}</h3>
                             <ul class="post-meta list-dotted">
-                                <li><span class="time">{{$post->created_at}}</span></li>
+                                <li><span class="time">{{$post->created_at->format('Y/m/d')}}</span></li>
                                 <li><a class="post-tag" href="#">{{$post->getCat->name}}</a></li>
                             </ul>
                         </div>

@@ -55,16 +55,18 @@
 				<!-- Form-->
 				<div class="cell-sm-6 cell-lg-4 cell-xl-3 cell-xl-postfix-1">
 					<div class="decorative decorative-md">
-						<h5 class="decorative-title">Рассылка</h5>
-						<p>Subscribe to our newsletter to receive updates on our company's products, news, and special offers.</p>
-						<!-- RD Mailform-->
-						<form class="rd-mailform rd-mailform-inline rd-mailform-small text-left" data-form-output="form-output-global" data-form-type="forms" method="post" action="bat/rd-mailform.php" novalidate="novalidate">
-							<div class="form-wrap">
-								<label class="form-label rd-input-label" for="inline-email-1">Enter your e-mail</label>
-								<input class="form-input form-control-has-validation form-control-last-child" id="inline-email-1" type="email" name="email" data-constraints="@Email @Required"><span class="form-validation"></span>
-							</div>
-							<button class="button button-sm button-secondary" type="submit">Subscribe</button>
-						</form>
+						<h5 class="decorative-title">Версии сайта</h5>
+						<ul class="list-marked list-marked-1">
+						@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+							<li>
+								<a rel="alternate"
+									hreflang="{{ $localeCode }}"
+									href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+									{{ mb_strtoupper($localeCode) }}
+								</a>
+							</li>
+						@endforeach
+						</ul>
 					</div>
 				</div>
 			</div>

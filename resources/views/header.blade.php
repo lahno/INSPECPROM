@@ -68,6 +68,14 @@
                     </div>
                     <div class="rd-navbar-cell">
                         <div class="rd-navbar-social">
+                            @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                <a  class="link {{(LaravelLocalization::getCurrentLocale() == $localeCode)?'active':''}}"
+                                    rel="alternate"
+                                    hreflang="{{ $localeCode }}"
+                                    href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                    {{ mb_strtoupper($localeCode) }}
+                                </a>
+                            @endforeach
                             {{--<a class="link fa fa-facebook" href="#"></a>
                             <a class="link fa fa-twitter" href="#"></a>
                             <a class="link fa fa-pinterest" href="#"></a>
@@ -95,10 +103,10 @@
                     <div class="rd-navbar-cell rd-navbar-nav-wrap">
                         <!-- RD Navbar Nav-->
                         <ul class="rd-navbar-nav toggle-original-elements">
-                            <li class="{{(Route::currentRouteName() == 'home') ? 'active' : ''}}">
+                            <li class="{{(Route::currentRouteNamed('home')) ? 'active' : ''}}">
                                 <a href="{{route('home')}}">Главная</a>
                             </li>
-                            <li class="{{(Route::currentRouteName() == 'products') ? 'active' : ''}} rd-navbar--has-dropdown rd-navbar-submenu">
+                            <li class="{{(Route::currentRouteNamed('products')) ? 'active' : ''}} rd-navbar--has-dropdown rd-navbar-submenu">
                                 <a href="{{route('products')}}">Продукция</a>
                                 <ul class="rd-navbar-dropdown">
                                     @foreach($menu_prod as $item)
@@ -142,16 +150,16 @@
                                     @endforeach
                                 </ul>
                             </li>
-                            <li class="{{(Route::currentRouteName() == 'gallery') ? 'active' : ''}}">
+                            <li class="{{(Route::currentRouteNamed('gallery')) ? 'active' : ''}}">
                                 <a href="{{route('gallery')}}">Галерея</a>
                             </li>
-                            <li class="{{(Route::currentRouteName() == 'posts') ? 'active' : ''}}">
+                            <li class="{{(Route::currentRouteNamed('posts')) ? 'active' : ''}}">
                                 <a href="{{route('posts')}}">Новости</a>
                             </li>
-                            <li class="{{(Route::currentRouteName() == 'about') ? 'active' : ''}}">
+                            <li class="{{(Route::currentRouteNamed('about')) ? 'active' : ''}}">
                                 <a href="{{route('about')}}">О компании</a>
                             </li>
-                            <li class="{{(Route::currentRouteName() == 'contact') ? 'active' : ''}}">
+                            <li class="{{(Route::currentRouteNamed('contact')) ? 'active' : ''}}">
                                 <a href="{{route('contact')}}">Контакты</a>
                             </li>
                         </ul>
