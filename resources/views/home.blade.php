@@ -7,79 +7,20 @@
 @section('content')
     <section class="section">
         <!-- Swiper-->
-        <div class="swiper-container swiper-slider swiper-slider-1 swiper-container-horizontal" data-loop="true" data-autoplay="5000" data-simulate-touch="false">
+        <div class="swiper-container swiper-slider swiper-slider-1 swiper-container-horizontal" data-loop="false" data-autoplay="5000" data-simulate-touch="false">
             <div class="swiper-wrapper" style="transition-duration: 600ms; transform: translate3d(-3432px, 0px, 0px);">
-                <div class="swiper-slide swiper-slide-duplicate" data-slide-bg="images/slider-1-1920x1000.jpg" style="background-image: url(&quot;images/slider-1-1920x1000.jpg&quot;); background-size: cover; width: 1144px;" data-swiper-slide-index="2">
+                <div class="swiper-slide" data-slide-bg="{{asset('html/images/slider_fon.jpg')}}" data-swiper-slide-index="0">
                     <div class="swiper-slide-caption">
                         <div class="shell shell-fluid">
                             <div class="range range-xl-condensed">
                                 <div class="cell-sm-11 cell-xl-6 cell-xl-preffix-1">
                                     <div class="decorative decorative-lg">
-                                        <h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100"><span class="text-bold">Lots of New Features</span></h1>
-                                        <h5 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">This template is packed with a wide range of amazing features that make it a perfect solution for any business, even for private entrepreneurs.</h5>
-                                        <div class="group-xl not-animated" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary" href="product-catalog.html">Buy fabricator</a><a class="button button-white-outline" href="about-us.html">Start a journey</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide" data-slide-bg="{{asset('html/images/slider-3-1920x1000.jpg')}}" style="background-image: url(&quot;images/slider-3-1920x1000.jpg&quot;); background-size: cover; width: 1144px;" data-swiper-slide-index="0">
-                    <div class="swiper-slide-caption">
-                        <div class="shell shell-fluid">
-                            <div class="range range-xl-condensed">
-                                <div class="cell-sm-11 cell-xl-6 cell-xl-preffix-1">
-                                    <div class="decorative decorative-lg">
-                                        <h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100">Welcome to <span class="text-bold">Fabricator</span>
-                                        </h1>
-                                        <h5 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">Fabricator is the smartest and the most flexible Bootstrap template by TemplateMonster allowing you to create exactly what you need with our powerful Bootstrap toolkit.</h5>
-                                        <div class="group-xl not-animated" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary" href="product-catalog.html">Buy fabricator</a><a class="button button-white-outline" href="about-us.html">Start a journey</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide swiper-slide-prev" data-slide-bg="{{asset('html/images/slider-2-1920x1000.jpg')}}" style="background-image: url(&quot;images/slider-2-1920x1000.jpg&quot;); background-size: cover; width: 1144px;" data-swiper-slide-index="1">
-                    <div class="swiper-slide-caption">
-                        <div class="shell shell-fluid">
-                            <div class="range range-xl-condensed">
-                                <div class="cell-sm-11 cell-xl-6 cell-xl-preffix-1">
-                                    <div class="decorative decorative-lg">
-                                        <h1 class="decorative-title fadeInUp animated" data-caption-animate="fadeInUp" data-caption-delay="100"><span class="text-bold">4 Home Page Layouts</span></h1>
-                                        <h5 class="caption fadeInUp animated" data-caption-animate="fadeInUp" data-caption-delay="250">Fabricator offers you 4 differently pre-designed Home Page layouts, which can perfectly present the main ideas of your business to your customers.</h5>
-                                        <div class="group-xl fadeInUp animated" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary" href="product-catalog.html">Buy fabricator</a><a class="button button-white-outline" href="about-us.html">Start a journey</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide swiper-slide-active" data-slide-bg="{{asset('html/images/slider-1-1920x1000.jpg')}}" style="background-image: url(&quot;images/slider-1-1920x1000.jpg&quot;); background-size: cover; width: 1144px;" data-swiper-slide-index="2">
-                    <div class="swiper-slide-caption">
-                        <div class="shell shell-fluid">
-                            <div class="range range-xl-condensed">
-                                <div class="cell-sm-11 cell-xl-6 cell-xl-preffix-1">
-                                    <div class="decorative decorative-lg">
-                                        <h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100"><span class="text-bold">Lots of New Features</span></h1>
-                                        <h5 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">This template is packed with a wide range of amazing features that make it a perfect solution for any business, even for private entrepreneurs.</h5>
-                                        <div class="group-xl not-animated" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary" href="product-catalog.html">Buy fabricator</a><a class="button button-white-outline" href="about-us.html">Start a journey</a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="swiper-slide swiper-slide-duplicate swiper-slide-next" data-slide-bg="{{asset('html/images/slider-3-1920x1000.jpg')}}" style="background-image: url(&quot;images/slider-3-1920x1000.jpg&quot;); background-size: cover; width: 1144px;" data-swiper-slide-index="0">
-                    <div class="swiper-slide-caption">
-                        <div class="shell shell-fluid">
-                            <div class="range range-xl-condensed">
-                                <div class="cell-sm-11 cell-xl-6 cell-xl-preffix-1">
-                                    <div class="decorative decorative-lg">
-                                        <h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100">Welcome to <span class="text-bold">Fabricator</span>
-                                        </h1>
-                                        <h5 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">Fabricator is the smartest and the most flexible Bootstrap template by TemplateMonster allowing you to create exactly what you need with our powerful Bootstrap toolkit.</h5>
-                                        <div class="group-xl not-animated" data-caption-animate="fadeInUp" data-caption-delay="450"><a class="button button-secondary" href="product-catalog.html">Buy fabricator</a><a class="button button-white-outline" href="about-us.html">Start a journey</a></div>
+                                        <h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100">Группа компаний “МАГР”</h1>
+                                        <h5 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">Научно-производственное объединение “Группа компаний “МАГР” создано в 1998 году. Центральный офис, конструкторское бюро и производство расположены в г. Чернигов. Представительства компании работают в Украине и Беларуси.</h5>
+                                        <div class="group-xl not-animated" data-caption-animate="fadeInUp" data-caption-delay="450">
+                                            <a class="button button-secondary" href="{{route('about')}}">О нас</a>
+                                            {{--<a class="button button-white-outline" href="about-us.html">Start a journey</a>--}}
+                                        </div>
                                     </div>
                                 </div>
                             </div>
