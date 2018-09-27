@@ -49,6 +49,7 @@ class Products extends Section
             ->setHtmlAttribute('class', 'table-primary');
 
         $display->setColumns([
+            AdminColumn::text('id', 'ID'),
             AdminColumn::text('name', 'Name'),
             AdminColumn::text('name_ua', 'Name UA'),
             AdminColumn::text('name_en', 'Name EN'),
