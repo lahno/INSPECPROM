@@ -107,7 +107,17 @@
                         </a>
                         @endif
                         <div class="decorative decorative-md">
-                            <h5 class="decorative-title"><a href="{{route('getCategory',['id'=>$category->id])}}">{{$category->name}}</a></h5>
+                            <h5 class="decorative-title">
+                                <a href="{{route('getCategory',['id'=>$category->id])}}">
+                                    @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                        {{$category->name}}
+                                    @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                        {{$category->name_en}}
+                                    @else
+                                        {{$category->name_ua}}
+                                    @endif
+                                </a>
+                            </h5>
                         </div>
                     </div>
                     @endif
@@ -144,8 +154,16 @@
             <div class="range range-40 range-xl-condensed range-center">
                 <div class="cell-sm-12 cell-xl-8">
                     {{--<div class="icon icon-xxl icon-primary mdi mdi-headset"></div>--}}
-                    <h3>{{$about->name}}</h3>
-                    {!! $about->text !!}
+                    @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                        <h3>{{$about->name}}</h3>
+                        {!! $about->text !!}
+                    @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                        <h3>{{$about->name_en}}</h3>
+                        {!! $about->text_en !!}
+                    @else
+                        <h3>{{$about->name_ua}}</h3>
+                        {!! $about->text_ua !!}
+                    @endif
                 </div>
             </div>
         </div>

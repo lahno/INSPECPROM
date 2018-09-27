@@ -165,7 +165,7 @@
                         </ul>
                     </div>
                     <!-- RD Navbar Panel Right-->
-                    <div class="rd-navbar-cell rd-navbar-panel-right">
+                    {{--<div class="rd-navbar-cell rd-navbar-panel-right">
                         <!-- Search toggle-->
                         <button class="search-toggle toggle-original" data-rd-navbar-toggle=".rd-navbar-search"><span class="toggle-icon"></span></button>
                         <!-- Search-->
@@ -179,7 +179,7 @@
                                 </div>
                             </form>
                         </div>
-                    </div>
+                    </div>--}}
                 </div>
             </div>
         </nav>

@@ -11,11 +11,23 @@
             <div class="range range-condensed">
                 <div class="cell-xs-10 cell-xl-preffix-1">
                     <div class="decorative decorative-lg">
-                        <h1 class="decorative-title">{{$page->name}}</h1>
+                        @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                            <h1 class="decorative-title">{{$page->name}}</h1>
+                        @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                            <h1 class="decorative-title">{{$page->name_en}}</h1>
+                        @else
+                            <h1 class="decorative-title">{{$page->name_ua}}</h1>
+                        @endif
                     </div>
                     <ol class="breadcrumbs-custom">
                         <li><a href="{{route('home')}}">Главная</a></li>
-                        <li>{{$page->name}}</li>
+                        @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                            <li>{{$page->name}}</li>
+                        @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                            <li>{{$page->name_en}}</li>
+                        @else
+                            <li>{{$page->name_ua}}</li>
+                        @endif
                     </ol>
                 </div>
             </div>
@@ -27,7 +39,13 @@
             <div class="range range-60 range-xl-condensed">
                 <div class="cell-md-7 cell-lg-6 cell-xl-preffix-1">
                     <div class="decorative decorative-lg">
-                        <h3 class="decorative-title">{{$page->name}}</h3>
+                        @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                            <h3 class="decorative-title">{{$page->name}}</h3>
+                        @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                            <h3 class="decorative-title">{{$page->name_en}}</h3>
+                        @else
+                            <h3 class="decorative-title">{{$page->name_ua}}</h3>
+                        @endif
                         <p class="text-block-1">{{$page->short_desc}}</p>
                         <!-- RD Mailform-->
                         <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="forms" method="post" action="">

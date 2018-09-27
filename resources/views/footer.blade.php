@@ -6,7 +6,13 @@
 				<div class="cell-sm-6 cell-lg-2 cell-xl-2 cell-xl-preffix-1">
 					<div class="decorative decorative-md">
 						<h5 class="decorative-title">О нас</h5>
-						<p>{{$about_text->short_desc}}</p>
+						@if(LaravelLocalization::getCurrentLocale() == 'ru')
+							<p>{{$about_text->short_desc}}</p>
+						@elseif(LaravelLocalization::getCurrentLocale() == 'en')
+							<p>{{$about_text->short_desc_en}}</p>
+						@else
+							<p>{{$about_text->short_desc_ua}}</p>
+						@endif
 					</div>
 				</div>
 				<!-- Contacts-->

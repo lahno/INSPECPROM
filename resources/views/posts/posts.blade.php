@@ -124,8 +124,16 @@
                                     <div class="decorative decorative-md">
                                         <h5 class="decorative-title">О нас</h5>
                                         <div class="sidebar-description">
-                                            <p>{{str_limit($about_text->short_desc, 200)}}</p>
-                                            <a class="post-link" href="{{route('about')}}">Подробнее</a>
+                                            @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                <p>{{str_limit($about_text->short_desc, 200)}}</p>
+                                                <a class="post-link" href="{{route('about')}}">Подробнее</a>
+                                            @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                <p>{{str_limit($about_text->short_desc_en, 200)}}</p>
+                                                <a class="post-link" href="{{route('about')}}">Learn More</a>
+                                            @else
+                                                <p>{{str_limit($about_text->short_desc_ua, 200)}}</p>
+                                                <a class="post-link" href="{{route('about')}}">Детальніше</a>
+                                            @endif
                                         </div>
                                     </div>
                                 </div>
