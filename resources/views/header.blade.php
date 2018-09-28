@@ -202,9 +202,9 @@
                             <li class="{{(Route::currentRouteNamed('gallery')) ? 'active' : ''}}">
                                 <a href="{{route('gallery')}}">{{trans('content.gallery')}}</a>
                             </li>
-                            <li class="{{(Route::currentRouteNamed('posts')) ? 'active' : ''}}">
+                            {{--<li class="{{(Route::currentRouteNamed('posts')) ? 'active' : ''}}">
                                 <a href="{{route('posts')}}">{{trans('content.news')}}</a>
-                            </li>
+                            </li>--}}
                             <li class="{{(Route::currentRouteNamed('about')) ? 'active' : ''}}">
                                 <a href="{{route('about')}}">{{trans('content.about')}}</a>
                             </li>

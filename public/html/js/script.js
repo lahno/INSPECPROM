@@ -1007,7 +1007,7 @@ $document.ready(function () {
         if (url = $this.attr("data-slide-bg")) {
           $this.css({
             "background-image": "url(" + url + ")",
-            "background-size": "contain"
+            "background-size": "cover"
           })
         }
       }

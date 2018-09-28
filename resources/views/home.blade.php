@@ -67,7 +67,7 @@
         </div>
     </section>
     <!-- Services-->
-    <section class="section bg-primary context-dark">
+    {{--<section class="section bg-primary context-dark">
         <div class="shell shell-fluid text-center">
             <div class="range">
                 <div class="cell-sm-12 cell-xl-10 cell-xl-preffix-1">
@@ -88,7 +88,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section>--}}
     <!-- About-->
     <section class="section section-sm bg-gray">
         <div class="shell shell-fluid text-center">

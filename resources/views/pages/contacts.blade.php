@@ -130,17 +130,20 @@
         </div>
     </section>
     <!-- RD Google Map-->
-    <section class="section" id="map_contact">
+    {{--<section class="section" id="map_contact">
         <div class="rd-google-map rd-google-map__model" data-styles="" data-zoom="6" data-y="51.4943145" data-x="31.3061158">
             <ul class="map_locations">
                 <li data-y="51.4943145" data-x="31.3061158">
                     <p>{{trans('content.address')}}</p>
                 </li>
-                {{--<li data-y="50.458814" data-x="30.5471116">
+                --}}{{--<li data-y="50.458814" data-x="30.5471116">
                     <p>9870 St Vincent Place, Glasgow, DC 45 Fr 45.</p>
-                </li>--}}
+                </li>--}}{{--
             </ul>
         </div>
+    </section>--}}
+    <section class="section">
+        <img src="{{asset('images/map.png')}}" alt="">
     </section>
 @endsection
 
