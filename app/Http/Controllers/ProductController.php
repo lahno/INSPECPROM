@@ -12,7 +12,7 @@ class ProductController extends SiteController
     {
         $this->template = 'products.products';
 
-        $categories = Categorie::where('type', 'product')->where('view', 'yes')->get();
+        $categories = Categorie::where('type', 'product')->get();
 
         $this->vars = array_add($this->vars, 'categories', $categories);
 
