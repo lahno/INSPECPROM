@@ -53,6 +53,7 @@
                 <div class="cell-sm-8 cell-lg-9 cell-xl-7 cell-xl-preffix-1">
                     <div class="range range-30 range-justify">
                         @foreach($item as $product)
+                            @if($product->view == 'yes')
                         <div class="cell-sm-6 cell-lg-4">
                             <div class="price-box">
                                 <a href="{{route('product', ['id'=>$product->id])}}">
@@ -72,6 +73,7 @@
                                 <a class="button button-secondary" href="{{route('product', ['id'=>$product->id])}}">{{trans('content.learn_more')}}</a>
                             </div>
                         </div>
+                            @endif
                         @endforeach
                     </div>
                 </div>
