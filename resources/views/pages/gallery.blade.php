@@ -55,7 +55,7 @@
                                     <div class="col-xs-12 col-sm-6 col-md-3 isotope-item"
                                          data-filter="{{($loop->first)?'*':$item->getType->name}}">
                                         <a class="thumbnail-type-2"
-                                           data-photo-swipe-item=""
+                                           data-photo-swipe-item="true"
                                            data-size="1200x800"
                                            href="{{asset($item->image)}}">
                                             <img src="{{asset($item->image_mid)}}" alt="" width="400" height="270"/>

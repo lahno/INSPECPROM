@@ -88,7 +88,7 @@ class Products extends Section
                     AdminFormElement::image('image', 'Image (960x500)')
                         ->setUploadSettings([
                             'orientate' => [],
-                            'resize' => [960, null, function ($constraint) {
+                            'resize' => [960, 500, function ($constraint) {
                                 $constraint->upsize();
                                 $constraint->aspectRatio();
                             }],
@@ -115,14 +115,14 @@ class Products extends Section
                     AdminFormElement::images('images', 'Images')
                         ->setUploadSettings([
                             'orientate' => [],
-                            'resize' => [1080, null, function ($constraint) {
+                            'resize' => [1280, null, function ($constraint) {
                                 $constraint->upsize();
                                 $constraint->aspectRatio();
                             }],
-                            'fit' => [1080, 680, function ($constraint) {
+                            /*'fit' => [1080, 680, function ($constraint) {
                                 $constraint->upsize();
                                 $constraint->aspectRatio();
-                            }]
+                            }]*/
                         ])
                         ->storeAsComaSeparatedValue(),
                 ], 12)

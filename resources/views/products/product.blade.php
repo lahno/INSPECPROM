@@ -89,13 +89,16 @@
                                         <!-- Isotope Content-->
                                         <div class="col-lg-12">
                                             <h4 class="decorative-title post-heading">{{trans('content.gallery')}}</h4>
-                                            <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
+                                            <div class="isotope" data-isotope-layout="masonry" data-isotope-group="gallery">
                                                 <div class="row row-no-gutter">
                                                     @foreach(explode(",", $product->images) as $item)
+                                                        @php
+                                                            $size = getimagesize($item);
+                                                        @endphp
                                                         <div class="col-xs-12 col-sm-6 col-md-3 isotope-item">
                                                             <a class="thumbnail-type-2"
                                                                data-photo-swipe-item=""
-                                                               data-size="1080x680"
+                                                               data-size="{{$size[0].'x'.$size[1]}}"
                                                                href="{{asset($item)}}">
                                                                 <img src="{{asset($item)}}" alt="" width="400" height="270"/>
                                                                 <div class="caption">
