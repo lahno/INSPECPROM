@@ -12,7 +12,7 @@ class ProductController extends SiteController
     {
         $this->template = 'products.products';
 
-        $categories = Categorie::where('type', 'product')->get();
+        $categories = Categorie::where('type', 'product')->where('view', 'yes')->get();
 
         $this->vars = array_add($this->vars, 'categories', $categories);
 
@@ -22,12 +22,13 @@ class ProductController extends SiteController
     {
         $this->template = 'products.product';
 
-        $product = Product::find($id);
+        $product = Product::where('id', $id)->where('view', 'yes')->first();
 
-        if ($product) $product->load('getCat');
-
-        $this->vars = array_add($this->vars, 'product', $product);
-
-        return $this->renderOutput();
+        if ($product){
+            $product->load('getCat');
+            $this->vars = array_add($this->vars, 'product', $product);
+            return $this->renderOutput();
+        }
+        return abort(404);
     }
 }

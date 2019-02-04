@@ -133,36 +133,40 @@
                                                                 @endif
                                                                 <ul class="rd-navbar-dropdown">
                                                                     @foreach($category->getProducts as $product)
-                                                                        @if(LaravelLocalization::getCurrentLocale() == 'ru')
-                                                                            <li>
-                                                                                <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
-                                                                            </li>
-                                                                        @elseif(LaravelLocalization::getCurrentLocale() == 'en')
-                                                                            <li>
-                                                                                <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
-                                                                            </li>
-                                                                        @else
-                                                                            <li>
-                                                                                <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
-                                                                            </li>
+                                                                        @if($product->view == 'yes')
+                                                                            @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                                                <li>
+                                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                                </li>
+                                                                            @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                                                <li>
+                                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                                </li>
+                                                                            @else
+                                                                                <li>
+                                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                                </li>
+                                                                            @endif
                                                                         @endif
                                                                     @endforeach
                                                                 </ul>
                                                             </li>
                                                         @endforeach
                                                         @foreach($item->getProducts as $product)
-                                                            @if(LaravelLocalization::getCurrentLocale() == 'ru')
-                                                                <li>
-                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
-                                                                </li>
-                                                            @elseif(LaravelLocalization::getCurrentLocale() == 'en')
-                                                                <li>
-                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
-                                                                </li>
-                                                            @else
-                                                                <li>
-                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
-                                                                </li>
+                                                            @if($product->view == 'yes')
+                                                                @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                                    <li>
+                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                    </li>
+                                                                @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                                    <li>
+                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                    </li>
+                                                                @else
+                                                                    <li>
+                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                    </li>
+                                                                @endif
                                                             @endif
                                                         @endforeach
                                                     </ul>
@@ -178,18 +182,20 @@
                                                     @endif
                                                     <ul class="rd-navbar-dropdown">
                                                         @foreach($item->getProducts as $product)
-                                                            @if(LaravelLocalization::getCurrentLocale() == 'ru')
-                                                                <li>
-                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
-                                                                </li>
-                                                            @elseif(LaravelLocalization::getCurrentLocale() == 'en')
-                                                                <li>
-                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
-                                                                </li>
-                                                            @else
-                                                                <li>
-                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
-                                                                </li>
+                                                            @if($product->view == 'yes')
+                                                                @if(LaravelLocalization::getCurrentLocale() == 'ru')
+                                                                    <li>
+                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                    </li>
+                                                                @elseif(LaravelLocalization::getCurrentLocale() == 'en')
+                                                                    <li>
+                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                    </li>
+                                                                @else
+                                                                    <li>
+                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                    </li>
+                                                                @endif
                                                             @endif
                                                         @endforeach
                                                     </ul>
