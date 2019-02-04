@@ -64,7 +64,7 @@
 						<h5 class="decorative-title">{{trans('content.change_language')}}</h5>
 						<ul class="list-marked list-marked-1">
 						@foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-							<li>
+							<li class="{{(LaravelLocalization::getCurrentLocale() == $localeCode)?'active':''}}">
 								<a rel="alternate"
 									hreflang="{{ $localeCode }}"
 									href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">

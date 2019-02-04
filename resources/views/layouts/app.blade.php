@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="wide smoothscroll wow-animation desktop landscape rd-navbar-fullwidth-linked" lang="{{app()->getLocale()}}"><head>
     <!-- Site Title-->
-    <title>{{$title or env('APP_NAME')}}</title>
+    <title>{{$title or env('APP_NAME').' - Развивая настоящее, создаём будущее'}}</title>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">

@@ -79,6 +79,40 @@
                             @endif
                         </div>
                     </section>
+
+                    <!-- Gallery grid-->
+                    @if(count(explode(",", $product->images)) && strlen($product->images))
+                        <div class="shell shell-fluid">
+                            <div class="range range-condensed">
+                                <div class="cell-sm-12 cell-xl-10 cell-xl-preffix-1 cell-xl-postfix-1">
+                                    <div class="row row-no-gutter" data-photo-swipe-gallery="gallery">
+                                        <!-- Isotope Content-->
+                                        <div class="col-lg-12">
+                                            <h4 class="decorative-title post-heading">{{trans('content.gallery')}}</h4>
+                                            <div class="isotope" data-isotope-layout="fitRows" data-isotope-group="gallery">
+                                                <div class="row row-no-gutter">
+                                                    @foreach(explode(",", $product->images) as $item)
+                                                        <div class="col-xs-12 col-sm-6 col-md-3 isotope-item">
+                                                            <a class="thumbnail-type-2"
+                                                               data-photo-swipe-item=""
+                                                               data-size="1080x680"
+                                                               href="{{asset($item)}}">
+                                                                <img src="{{asset($item)}}" alt="" width="400" height="270"/>
+                                                                <div class="caption">
+                                                                    <div class="icon icon-white mdi mdi-magnify-plus"></div>
+                                                                </div>
+                                                            </a>
+                                                        </div>
+                                                    @endforeach
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+
                 </div>
             </div>
         </div>

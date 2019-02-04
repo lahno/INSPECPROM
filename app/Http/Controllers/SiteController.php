@@ -21,7 +21,7 @@ class SiteController extends Controller
     }
 
     protected function renderOutput(){
-        $this->title = env('APP_NAME');
+        $this->title = env('APP_NAME').' — Развивая настоящее, создаём будущее';
 
         $this->vars = array_add($this->vars, 'title', $this->title);
         $this->vars = array_add($this->vars, 'description', $this->description);

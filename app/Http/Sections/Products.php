@@ -111,6 +111,21 @@ class Products extends Section
                 ->addColumn([
                     AdminFormElement::ckeditor('text_en', 'Text EN')->required()
                 ], 12)
+                ->addColumn([
+                    AdminFormElement::images('images', 'Images')
+                        ->setUploadSettings([
+                            'orientate' => [],
+                            'resize' => [1080, null, function ($constraint) {
+                                $constraint->upsize();
+                                $constraint->aspectRatio();
+                            }],
+                            'fit' => [1080, 680, function ($constraint) {
+                                $constraint->upsize();
+                                $constraint->aspectRatio();
+                            }]
+                        ])
+                        ->storeAsComaSeparatedValue(),
+                ], 12)
 
         ]);
     }

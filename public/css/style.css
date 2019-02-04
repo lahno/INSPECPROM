@@ -17,6 +17,9 @@ header .rd-navbar-brand img {
 a.link.active{
     color: #ffba00!important;
 }
+.list-marked li.active a{
+    color: #fff!important;
+}
 .swiper-slide:after{
     content: '';
     display: block;
