@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="cell-sm-8 cell-lg-9 cell-xl-7 cell-xl-preffix-1">
-                    <div class="range range-30 range-justify">
+                    <div class="range range-30 {{--range-justify--}}">
                         @foreach($item as $product)
                             @if($product->view == 'yes')
                         <div class="cell-sm-6 cell-lg-4">
