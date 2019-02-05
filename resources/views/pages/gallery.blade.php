@@ -53,7 +53,7 @@
                                 <div class="row row-no-gutter">
                                     @foreach($gallery as $item)
                                     <div class="col-xs-12 col-sm-6 col-md-3 isotope-item"
-                                         data-filter="{{($loop->first)?'*':$item->getType->name}}">
+                                         data-filter="{{$item->getType->name}}">
                                         <a class="thumbnail-type-2"
                                            data-photo-swipe-item="true"
                                            data-size="1200x800"
