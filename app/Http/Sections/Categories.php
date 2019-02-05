@@ -87,11 +87,11 @@ class Categories extends Section
                     AdminFormElement::image('image', 'Image')
                         ->setUploadSettings([
                             'orientate' => [],
-                            'resize' => [206, null, function ($constraint) {
+                            'resize' => [340, null, function ($constraint) {
                                 $constraint->upsize();
                                 $constraint->aspectRatio();
                             }],
-                            'fit' => [206, 174, function ($constraint) {
+                            'fit' => [340, 255, function ($constraint) {
                                 $constraint->upsize();
                                 $constraint->aspectRatio();
                             }]

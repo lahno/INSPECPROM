@@ -13,10 +13,11 @@
                     <div class="swiper-slide-caption">
                         <div class="shell shell-fluid">
                             <div class="range range-xl-condensed">
-                                <div class="cell-sm-11 cell-xl-6 cell-xl-preffix-1">
-                                    <div class="decorative decorative-lg">
-                                        <h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100">{{trans('content.magr_group')}}</h1>
-                                        <h5 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">{{trans('content.magr_text')}}</h5>
+                                <div class="cell-sm-12">
+                                    <div class="decorative decorative-lg text-center">
+                                        <img src="{{asset('images/logo_b.png')}}">
+                                        {{--<h1 class="decorative-title not-animated" data-caption-animate="fadeInUp" data-caption-delay="100">{{trans('content.magr_group')}}</h1>--}}
+                                        <h1 class="caption not-animated" data-caption-animate="fadeInUp" data-caption-delay="250">{{trans('content.slogan')}}</h1>
                                         <div class="group-xl not-animated" data-caption-animate="fadeInUp" data-caption-delay="450">
                                             <a class="button button-secondary" href="{{route('about')}}">{{trans('content.about')}}</a>
                                             {{--<a class="button button-white-outline" href="about-us.html">Start a journey</a>--}}
@@ -67,12 +68,13 @@
         </div>
     </section>
     <!-- Services-->
-    {{--<section class="section bg-primary context-dark">
+    <section class="section bg-primary context-dark">
         <div class="shell shell-fluid text-center">
             <div class="range">
                 <div class="cell-sm-12 cell-xl-10 cell-xl-preffix-1">
-                    <div class="range range-condensed decorative-container decorative-container-lg">
-                        <div class="cell-sm-4 cell-md-4 decorative-cell">
+                    <div class="range range-condensed decorative-container decorative-container-lg text-center">
+                        <iframe width="100%" height="700" src="https://www.youtube.com/embed/fQJLZvx7TKU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        {{--<div class="cell-sm-4 cell-md-4 decorative-cell">
                             <div class="icon icon-xl icon-secondary mdi mdi-vector-square"></div>
                             <h6>Advanced UI Kit for Web Developers</h6>
                         </div>
@@ -83,12 +85,12 @@
                         <div class="cell-sm-4 cell-md-4 decorative-cell">
                             <div class="icon icon-xl icon-secondary mdi mdi-cellphone-link"></div>
                             <h6>Extremely Responsive and Retina Ready</h6>
-                        </div>
+                        </div>--}}
                     </div>
                 </div>
             </div>
         </div>
-    </section>--}}
+    </section>
     <!-- About-->
     <section class="section section-sm bg-gray">
         <div class="shell shell-fluid text-center">

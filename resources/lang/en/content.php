@@ -19,6 +19,8 @@ return [
     'city' => 'Chernigov',
 
     // home
+    'slogan' => 'Developing the present, we create the future',
+
     'magr_group' => 'Group of Companies "MAGR"',
     'magr' => 'MAGR',
     'magr_text' => 'Research and production association “Group of Companies" MAGR" was created in 1998. Head office, engineering department and manufacture are located in Chernigov city. Representative offices work in Ukraine, Belorussia and Moldova.',
