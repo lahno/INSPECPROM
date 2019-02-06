@@ -73,19 +73,42 @@
             <div class="range">
                 <div class="cell-sm-12 cell-xl-10 cell-xl-preffix-1">
                     <div class="range range-condensed decorative-container decorative-container-lg text-center">
-                        <iframe width="100%" height="700" src="https://www.youtube.com/embed/fQJLZvx7TKU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                        {{--<div class="cell-sm-4 cell-md-4 decorative-cell">
-                            <div class="icon icon-xl icon-secondary mdi mdi-vector-square"></div>
-                            <h6>Advanced UI Kit for Web Developers</h6>
+                        <iframe width="100%"
+                                height="700"
+                                src="https://www.youtube.com/embed/fQJLZvx7TKU"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+
+                        <div class="col-xs-12 text-center">
+                            @php
+                                $size = getimagesize(asset('images/patent.jpg'));
+                            @endphp
+                            <a class="thumbnail-type-2"
+                               style="display: inline-block; width: 400px; margin: 50px 3% 0 3%;"
+                               data-photo-swipe-item=""
+                               data-size="{{$size[0].'x'.$size[1]}}"
+                               href="{{asset('images/patent.jpg')}}">
+                                <img src="{{asset('images/patent.jpg')}}" alt="{{env('APP_NAME')}}" width="400" height="270"/>
+                                <div class="caption">
+                                    <div class="icon icon-white mdi mdi-magnify-plus"></div>
+                                </div>
+                            </a>
+
+                            @php
+                                $size = getimagesize(asset('images/svidoctvo.jpg'));
+                            @endphp
+                            <a class="thumbnail-type-2"
+                               style="display: inline-block; width: 400px; margin: 50px 3% 0 3%;"
+                               data-photo-swipe-item=""
+                               data-size="{{$size[0].'x'.$size[1]}}"
+                               href="{{asset('images/svidoctvo.jpg')}}">
+                                <img src="{{asset('images/svidoctvo.jpg')}}" alt="{{env('APP_NAME')}}" width="400" height="270"/>
+                                <div class="caption">
+                                    <div class="icon icon-white mdi mdi-magnify-plus"></div>
+                                </div>
+                            </a>
                         </div>
-                        <div class="cell-sm-4 cell-md-4 decorative-cell">
-                            <div class="icon icon-xl icon-secondary mdi mdi-bulletin-board"></div>
-                            <h6>Extended Bootstrap Toolkit</h6>
-                        </div>
-                        <div class="cell-sm-4 cell-md-4 decorative-cell">
-                            <div class="icon icon-xl icon-secondary mdi mdi-cellphone-link"></div>
-                            <h6>Extremely Responsive and Retina Ready</h6>
-                        </div>--}}
                     </div>
                 </div>
             </div>
