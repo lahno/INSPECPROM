@@ -44,4 +44,7 @@ return [
     // Forms
     'btn_form_1' => 'Отправить',
 
+    // Products
+    'product_1' => 'Прес гідравлічний ПАГ-01',
+
 ];

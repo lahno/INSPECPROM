@@ -44,4 +44,7 @@ return [
     // Forms
     'btn_form_1' => 'Send',
 
+    // Products
+    'product_1' => 'Press hydraulic PG-01',
+
 ];

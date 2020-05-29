@@ -71,11 +71,16 @@
     <section class="section bg-primary context-dark">
         <div class="shell shell-fluid text-center">
             <div class="range">
+                <div class="cell-sm-12 cell-xl-10 cell-xl-preffix-1 cell-xl-postfix-1">
+                    <div class="decorative decorative-lg" style="margin-top: 50px;">
+                        <h3 class="decorative-title">{{trans('content.product_1')}}</h3>
+                    </div>
+                </div>
                 <div class="cell-sm-12 cell-xl-10 cell-xl-preffix-1">
                     <div class="range range-condensed decorative-container decorative-container-lg text-center">
                         <iframe width="100%"
                                 height="700"
-                                src="https://www.youtube.com/embed/fQJLZvx7TKU"
+                                src="https://www.youtube.com/embed/U4imm-_ZxNg"
                                 frameborder="0"
                                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                 allowfullscreen></iframe>
