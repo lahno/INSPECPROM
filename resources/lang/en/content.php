@@ -45,6 +45,6 @@ return [
     'btn_form_1' => 'Send',
 
     // Products
-    'product_1' => 'Press hydraulic PG-01',
+    'product_1' => 'Presentation of Screen Exhaust Device',
 
 ];
