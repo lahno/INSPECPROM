@@ -115,14 +115,14 @@
                                     </div>
                                 </div>
                             </li>
-                            <li>
+<!--                            <li>
                                 <div class="unit unit-horizontal unit-spacing-xxs unit-middle">
                                     <div class="unit__left"><span class="icon icon-xs icon-primary mdi mdi-phone"></span></div>
                                     <div class="unit__body">
                                         <a class="link-default" href="callto:{{Config::get('contacts.phone_2')}}">{{Config::get('contacts.phone_2')}}</a>
                                     </div>
                                 </div>
-                            </li>
+                            </li>-->
                         </ul>
                     </div>
                 </div>
