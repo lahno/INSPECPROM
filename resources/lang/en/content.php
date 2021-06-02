@@ -15,7 +15,7 @@ return [
     'change_language' => 'Change language',
 
     // Contacts
-    'address' => 'Chernigov Str. Wide 2',
+    'address' => 'Chernigov Str. Shevchenko, 144',
     'city' => 'Chernigov',
 
     // home
