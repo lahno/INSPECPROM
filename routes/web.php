@@ -41,4 +41,7 @@ Route::group(['prefix' => LaravelLocalization::setLocale()], function(){
 
 // Gallery
     Route::get('gallery', 'GalleryController@gallery')->name('gallery');
+
+    // PPOST REQUESTS
+    Route::post('send_feedback', 'Request/PostController@sendFeedback')->name('send_feedback');
 });

@@ -48,27 +48,22 @@
                         @endif
                         <p class="text-block-1">{{$page->short_desc}}</p>
                         <!-- RD Mailform-->
-                        <form class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="forms" method="post" action="">
+                        <form id="feedback_form" class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="forms" method="post" action="{{route('send_feedback')}}">
+                            {{ csrf_field() }}
                             <div class="range range-xs-center range-15">
-                                <div class="cell-sm-6">
+                                <div class="cell-sm-4">
                                     <div class="form-wrap form-wrap-validation">
-                                        <label class="form-label form-label-outside" for="forms-name">First name</label>
+                                        <label class="form-label form-label-outside" for="forms-name">Name</label>
                                         <input class="form-input" id="forms-name" type="text" name="name" data-constraints="@Required">
                                     </div>
                                 </div>
-                                <div class="cell-sm-6">
-                                    <div class="form-wrap form-wrap-validation">
-                                        <label class="form-label form-label-outside" for="forms-last-name">Last name</label>
-                                        <input class="form-input" id="forms-last-name" type="text" name="last-name" data-constraints="@Required">
-                                    </div>
-                                </div>
-                                <div class="cell-sm-6">
+                                <div class="cell-sm-4">
                                     <div class="form-wrap form-wrap-validation">
                                         <label class="form-label form-label-outside" for="forms-email">E-mail</label>
                                         <input class="form-input" id="forms-email" type="email" name="email" data-constraints="@Email @Required">
                                     </div>
                                 </div>
-                                <div class="cell-sm-6">
+                                <div class="cell-sm-4">
                                     <div class="form-wrap form-wrap-validation">
                                         <label class="form-label form-label-outside" for="forms-phone">Phone</label>
                                         <input class="form-input" id="forms-phone" type="text" name="phone" data-constraints="@Numeric @Required">
