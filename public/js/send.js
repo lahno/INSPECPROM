@@ -18,8 +18,12 @@ $(document).ready(function() {
                 beforeSendForm(form);
             },
             success: function (data) {
-                modal_massage.find('.modal-body p').text(data.message);
-                modal_massage.modal('show');
+                if (data.status){
+                    modal_massage.find('.modal-body p').text(data.message);
+                    modal_massage.modal('show');
+                }else{
+                    alert('Error sending message');
+                }
             },
             error: function (xhr) {
                 if (xhr.status === 422) {
