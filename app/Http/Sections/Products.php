@@ -74,7 +74,8 @@ class Products extends Section
                 ->addColumn([
                     AdminFormElement::text('name', 'Name')->required(),
                     AdminFormElement::text('name_ua', 'Name UA')->required(),
-                    AdminFormElement::text('name_en', 'Name EN')->required()
+                    AdminFormElement::text('name_en', 'Name EN')->required(),
+                    AdminFormElement::text('slug', 'Alias')->setDefaultValue(0)
                 ], 6)
                 ->addColumn([
                     AdminFormElement::select('view', 'View')->setEnum(['yes', 'no'])->setDefaultValue('yes'),

@@ -136,15 +136,15 @@
                                                                         @if($product->view == 'yes')
                                                                             @if(LaravelLocalization::getCurrentLocale() == 'ru')
                                                                                 <li>
-                                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                                    <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name}}</a>
                                                                                 </li>
                                                                             @elseif(LaravelLocalization::getCurrentLocale() == 'en')
                                                                                 <li>
-                                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                                    <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name_en}}</a>
                                                                                 </li>
                                                                             @else
                                                                                 <li>
-                                                                                    <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                                    <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name_ua}}</a>
                                                                                 </li>
                                                                             @endif
                                                                         @endif
@@ -156,15 +156,15 @@
                                                             @if($product->view == 'yes')
                                                                 @if(LaravelLocalization::getCurrentLocale() == 'ru')
                                                                     <li>
-                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                        <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name}}</a>
                                                                     </li>
                                                                 @elseif(LaravelLocalization::getCurrentLocale() == 'en')
                                                                     <li>
-                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                        <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name_en}}</a>
                                                                     </li>
                                                                 @else
                                                                     <li>
-                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                        <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name_ua}}</a>
                                                                     </li>
                                                                 @endif
                                                             @endif
@@ -185,15 +185,15 @@
                                                             @if($product->view == 'yes')
                                                                 @if(LaravelLocalization::getCurrentLocale() == 'ru')
                                                                     <li>
-                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name}}</a>
+                                                                        <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name}}</a>
                                                                     </li>
                                                                 @elseif(LaravelLocalization::getCurrentLocale() == 'en')
                                                                     <li>
-                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_en}}</a>
+                                                                        <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name_en}}</a>
                                                                     </li>
                                                                 @else
                                                                     <li>
-                                                                        <a href="{{route('product', ['id'=>$product->id])}}">{{$product->name_ua}}</a>
+                                                                        <a href="{{route('product', ['id'=>($product->slug)?$product->slug:$product->id])}}">{{$product->name_ua}}</a>
                                                                     </li>
                                                                 @endif
                                                             @endif

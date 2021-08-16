@@ -21,8 +21,7 @@ class ProductController extends SiteController
     public function product($id)
     {
         $this->template = 'products.product';
-
-        $product = Product::where('id', $id)->where('view', 'yes')->first();
+        $product = Product::where((is_numeric($id))?'id':'slug', $id)->where('view', 'yes')->first();
 
         if ($product){
             $product->load('getCat');
