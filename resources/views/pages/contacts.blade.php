@@ -48,7 +48,7 @@
                         @endif
                         <p class="text-block-1">{{$page->short_desc}}</p>
                         <!-- RD Mailform-->
-                        <form id="feedback_form" class="rd-mailform text-left" data-form-output="form-output-global" data-form-type="forms" method="post" action="{{route('send_feedback')}}">
+                        <form id="feedback_form" class="rd-mailform text-left" method="post" action="{{route('send_feedback')}}">
                             {{ csrf_field() }}
                             <div class="range range-xs-center range-15">
                                 <div class="cell-sm-4">

@@ -13,7 +13,7 @@ class PostController extends Controller
 {
     public function sendFeedback(StoreFeedbackForm $request)
     {
-        Mail::to('magr.info@magr.com.ua')->send(new CreateFeedback($request->all()));
+        Mail::to('magr.info@magr.com.ua')->send(new CreateFeedback($request));
         return ['status' => true, 'message' => 'Обращение отправленно!'];
     }
 }
