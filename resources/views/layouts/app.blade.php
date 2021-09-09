@@ -21,6 +21,7 @@
     </div>
     <script src="{{asset('html/js/html5shiv.min.js')}}"></script>
     <![endif]-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 <body>
 <!-- Page-->

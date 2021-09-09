@@ -27,7 +27,8 @@ class StoreFeedbackForm extends FormRequest
             'name' => 'required|string|max:150',
             'email' => 'required|email|max:150',
             'phone' => 'required|string|max:25',
-            'message' => 'required|string|max:1000'
+            'message' => 'required|string|max:1000',
+            'g-recaptcha-response' => 'required|recaptcha'
         ];
     }
 }

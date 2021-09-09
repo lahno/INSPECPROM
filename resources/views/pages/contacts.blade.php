@@ -75,6 +75,15 @@
                                         <textarea class="form-input" id="forms-message" name="message" data-constraints="@Required"></textarea>
                                     </div>
                                 </div>
+                                @if(config('services.recaptcha.key'))
+                                    <div class="cell-sm-12">
+                                        <div class="form-wrap form-wrap-validation">
+                                                <div class="g-recaptcha"
+                                                     data-sitekey="{{config('services.recaptcha.key')}}">
+                                                </div>
+                                        </div>
+                                    </div>
+                                @endif
                             </div>
                             <div class="form-button">
                                 <button class="button button-secondary" type="submit">{{trans('content.btn_form_1')}}</button>
@@ -138,7 +147,8 @@
         </div>
     </section>--}}
     <section class="section">
-        <img src="{{asset('images/map.png')}}" alt="">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2483.144856757576!2d31.34279041577008!3d51.510558379635675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d5484be1a38487%3A0xa44b4632b15f03a4!2z0YPQu9C40YbQsCDQqNC10LLRh9C10L3QutC-LCAxNDQsINCn0LXRgNC90LjQs9C-0LIsINCn0LXRgNC90LjQs9C-0LLRgdC60LDRjyDQvtCx0LvQsNGB0YLRjCwgMTQwMDA!5e0!3m2!1sru!2sua!4v1631173810693!5m2!1sru!2sua" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+{{--        <img src="{{asset('images/map.png')}}" alt="">--}}
     </section>
 @endsection
 

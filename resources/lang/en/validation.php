@@ -12,6 +12,8 @@ return [
     | as the size rules. Feel free to tweak each of these messages here.
     |
     */
+    'g-recaptcha-response.recaptcha' => 'Captcha verification failed',
+    'g-recaptcha-response.required' => 'Please complete the captcha',
 
     'accepted'             => 'The :attribute must be accepted.',
     'active_url'           => 'The :attribute is not a valid URL.',

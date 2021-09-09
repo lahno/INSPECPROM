@@ -12,6 +12,8 @@ return [
     | наприклад, size. Ви можете змінити будь-яке з цих повідомлень.
     |
     */
+    'g-recaptcha-response.recaptcha' => 'Не вдалося перевірити капчу',
+    'g-recaptcha-response.required' => 'Будь ласка, заповніть капчу',
 
     'accepted'             => 'Ви повинні прийняти :attribute.',
     'active_url'           => 'Поле :attribute не є правильним URL.',

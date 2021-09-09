@@ -13,6 +13,8 @@ return [
     | другие, которые лучше подходят для вашего приложения.
     |
     */
+    'g-recaptcha-response.recaptcha' => 'Ошибка проверки Captcha',
+    'g-recaptcha-response.required' => 'Пожалуйста, введите капчу',
 
     'accepted'             => 'Вы должны принять :attribute.',
     'active_url'           => 'Поле :attribute содержит недействительный URL.',
