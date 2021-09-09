@@ -28,10 +28,19 @@ $(document).ready(function() {
             error: function (xhr) {
                 if (xhr.status === 422) {
                     var errors = $.parseJSON(xhr.responseText);
-                    $.each(errors.errors, function (key, val) {
-                        form.find("#create_request_form_" + key)
+                    console.log(errors);
+                    $.each(errors, function (key, val) {
+                        form.find("#forms-" + key).parents('.form-wrap-validation')
+                            .addClass('is-invalid');
+                        form.find("." + key).parents('.form-wrap-validation')
                             .addClass('is-invalid');
                     });
+                }
+                if( xhr.status === 419 ) {
+                    alert(errors.message);
+                }
+                if( xhr.status === 500 ) {
+                    alert('Непредвиденная ошибка сервера! Попробуйте чуть позже.');
                 }
             },
             complete: function () {
@@ -39,7 +48,6 @@ $(document).ready(function() {
             }
         });
     });
-
 
     function beforeSendForm(form) {
         form.find('button[type="submit"]').addClass('disabled');

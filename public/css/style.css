@@ -37,3 +37,6 @@ a.link.active{
 .swiper-slide .swiper-slide-caption{
     z-index: 2;
 }
+.is-invalid.form-wrap-validation textarea, .is-invalid.form-wrap-validation input, .is-invalid.form-wrap-validation .g-recaptcha > div{
+    border: 1px solid red;
+}
